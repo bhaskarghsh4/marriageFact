@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .fact {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .fact-title {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .fact-description {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interesting Facts About Marriage</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        const facts = [
+            {
+                "title": "Historical Roots",
+                "description": "Marriage is an ancient institution, with evidence of its practice dating back to around 2350 B.C. in Mesopotamia."
+            },
+            {
+                "title": "Cultural Variations",
+                "description": "Different cultures have unique marriage customs. For example, in India, arranged marriages are still common, while in Western cultures, love marriages are more prevalent."
+            },
+            {
+                "title": "Legal Recognition",
+                "description": "Marriage is recognized legally in most countries, providing spouses with certain rights and responsibilities."
+            },
+            {
+                "title": "Symbolic Traditions",
+                "description": "Wedding rings are a common symbol of marriage, representing eternal love and commitment. The tradition of wearing the ring on the fourth finger of the left hand dates back to ancient Rome."
+            },
+            {
+                "title": "Changing Trends",
+                "description": "In recent decades, the average age of marriage has increased in many countries, with people choosing to marry later in life."
+            },
+            {
+                "title": "Same-Sex Marriage",
+                "description": "The legal recognition of same-sex marriage has been a significant social change in the 21st century, with countries like the Netherlands leading the way in 2001."
+            },
+            {
+                "title": "Economic Impact",
+                "description": "Marriage can have economic benefits, such as tax breaks and shared expenses, but it can also lead to financial challenges, especially in the case of divorce."
+            },
+            {
+                "title": "Health Benefits",
+                "description": "Studies have shown that married individuals often enjoy better physical and mental health compared to their single counterparts."
+            },
+            {
+                "title": "Divorce Rates",
+                "description": "Divorce rates vary widely across the world, with some countries experiencing high rates, while others have low rates due to cultural or legal factors."
+            },
+            {
+                "title": "Anniversaries",
+                "description": "Celebrating wedding anniversaries is a common tradition, with specific gifts associated with each milestone year, such as paper for the first anniversary and silver for the 25th."
+            }
+        ];
+
+        const factsContainer = document.getElementById('facts-container');
+
+        facts.forEach(fact => {
+            const factElement = document.createElement('div');
+            factElement.classList.add('fact');
+
+            const titleElement = document.createElement('div');
+            titleElement.classList.add('fact-title');
+            titleElement.textContent = fact.title;
+
+            const descriptionElement = document.createElement('div');
+            descriptionElement.classList.add('fact-description');
+            descriptionElement.textContent = fact.description;
+
+            factElement.appendChild(titleElement);
+            factElement.appendChild(descriptionElement);
+            factsContainer.appendChild(factElement);
+        });
+    </script>
+</body>
+</html>
